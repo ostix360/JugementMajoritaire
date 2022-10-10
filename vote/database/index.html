@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Data base</title>
+  </head>
+  <body>
+    <h1>Data Base Viewer</h1>
+	<br/>
+	
+	<form>
+		<input id="psw" type="text"  name="psw"  maxlength="8" size="20" required>
+		<input id="post" type="button" value="Envoyer"/>
+	</form>
+	
+    <script>
+      async function getData() {
+        const option = {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      };
+        const response = await fetch('/bd',option);
+        const data = await response.json();
+        console.log(data);
+        for (const item of data) {
+          const root = document.createElement("div");
+          const payer = document.createElement("div");
+          const amount = document.createElement("div");
+          const date = document.createElement("div");
+          const paymentID = document.createElement("div");
+          const verified = document.createElement("div");
+          const link = document.createElement("div");  
+
+          payer.textContent = "TORRES CELIA " + item.user_uid;
+          amount.textContent = "Amount " + item.amount + " pi";
+          paymentID.textContent = "PaymentId " + item.paymentID;
+          date.textContent = "Date " + new Date(item.paymentTime).toLocaleString();
+          verified.textContent = "Verified " + item.verified;
+          link.textContent = "link " + item.link;
+
+          root.append(payer, amount, date,verified,paymentID,link);
+          document.body.append(root);
+        }
+        console.log(data);
+      }
+
+      getData();
+    </script>
+  </body>
+</html>

