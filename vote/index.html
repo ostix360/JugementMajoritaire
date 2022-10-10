@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-Transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		
+		<title>Vote</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="index.js"></script>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<th>TORRES CELIA</th>
+				<th>BANTSE SCHILO-BETTIEL</th>
+				<th>HERBU ANN</th>
+				<th>SEDDIKI SOUMAYA</th>
+				<th>RAYMOND RAPHAËL</th>
+				<th>CONSEIL LUCAS</th>
+				<th>JEAN JAROD</th>
+			</tr>
+			 <tr>
+				<td id="TORRES CELIA">
+					<select name="Note1" id="NoteTC">
+						<option value="E">Excellent</option>
+						<option value="TB">Trés bien</option>
+						<option value="B">Bien</option>
+						<option value="AB">Assez Bien</option>
+						<option value="P">Passable</option>
+						<option value="I">Insuffisant</option>
+						<option value="AR">A rejeter</option>
+					</select>
+				</td>
+				<td id="BANTSE SCHILO-BETTIEL">
+					<select name="Note2" id="NoteBS">
+						<option value="E">Excellent</option>
+						<option value="TB">Trés bien</option>
+						<option value="B">Bien</option>
+						<option value="AB">Assez Bien</option>
+						<option value="P">Passable</option>
+						<option value="I">Insuffisant</option>
+						<option value="AR">A rejeter</option>
+					</select>
+				</td>
+				<td id="HERBU ANN">
+					<select name="Note3" id="NoteHA">
+						<option value="E">Excellent</option>
+						<option value="TB">Trés bien</option>
+						<option value="B">Bien</option>
+						<option value="AB">Assez Bien</option>
+						<option value="P">Passable</option>
+						<option value="I">Insuffisant</option>
+						<option value="AR">A rejeter</option>
+					</select>
+				</td>
+				<td id="SEDDIKI SOUMAYA">
+					<select name="Note4" id="NoteSS">
+						<option value="E">Excellent</option>
+						<option value="TB">Trés bien</option>
+						<option value="B">Bien</option>
+						<option value="AB">Assez Bien</option>
+						<option value="P">Passable</option>
+						<option value="I">Insuffisant</option>
+						<option value="AR">A rejeter</option>
+					</select>
+				</td>
+				<td id="RAYMOND RAPHAËL">
+					<select name="Note5" id="NoteRR">
+						<option value="E">Excellent</option>
+						<option value="TB">Trés bien</option>
+						<option value="B">Bien</option>
+						<option value="AB">Assez Bien</option>
+						<option value="P">Passable</option>
+						<option value="I">Insuffisant</option>
+						<option value="AR">A rejeter</option>
+					</select>
+				</td>
+				<td id="CONSEIL LUCAS">
+					<select name="Note6" id="NoteCL">
+						<option value="E">Excellent</option>
+						<option value="TB">Trés bien</option>
+						<option value="B">Bien</option>
+						<option value="AB">Assez Bien</option>
+						<option value="P">Passable</option>
+						<option value="I">Insuffisant</option>
+						<option value="AR">A rejeter</option>
+					</select>
+				</td>
+				<td id="JEAN JAROD">
+					<select name="Note7" id="NoteJJ">
+						<option value="E">Excellent</option>
+						<option value="TB">Trés bien</option>
+						<option value="B">Bien</option>
+						<option value="AB">Assez Bien</option>
+						<option value="P">Passable</option>
+						<option value="I">Insuffisant</option>
+						<option value="AR">A rejeter</option>
+					</select>
+				</td>
+			  </tr>
+		</table>
+		
+		<br/>
+		
+		<p>
+			Pour vous authentifier veuilliez rentrer un mot de passe que vous enverais ensuite à Victor Robin (Seul le dernier vote sera pris en compte). <br/>
+			Bien sûr les identifiants incorect ne seront pas pris en compte.
+		</p>
+		
+		<br/>
+		
+		<h5>Mot de passe : </h5>
+		<input id="psw" type="text"  name="psw"  maxlength="8" size="20" required>
+	
+		<br/>
+		<br/>
+		
+		<form>
+			 <input id="post" type="button" value="Envoyer"/>
+		</form>
+		
+		<script>
+			
+			var simulate = document.querySelector('input[value="Envoyer"]');
+		
+		
+			simulate.addEventListener('click', onClick);
+	   
+		</script>
+		
+	</body>
+</html>
+
+
+
