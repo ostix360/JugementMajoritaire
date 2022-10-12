@@ -21,5 +21,5 @@ function onClick() {
     fetch('/send', option);
 	
 	console.log(NoteTC + " " + NoteBS + " " + NoteHA + " " + NoteSS + " " + NoteRR + " " + NoteCL + " " + NoteJJ + " " + psw);
-	
+	alert("Merci d'avoir voté, veuilliez maintenant envoyer " + psw + " à Victor Robin sur l'ent pour que le vote soit pris en compte");
 }
